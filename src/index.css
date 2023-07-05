@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333333;
+  background-color: #f2f2f2;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #b3aeae;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+  color: #242323;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
+  .footer p {
+    font-size: 12px !important;
+  }
+}
+
+#drum-machine {
+  display: grid;
+  place-items: center;
+  margin-top: 3rem;
+}
+#drum-machine h2 {
+  margin-bottom: 4rem;
+}
+tbody {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.drum-pad {
+  font-weight: bold;
+  color: rgb(48, 44, 40);
+  height: 80px;
+  width: 80px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  user-select: none;
+}
+.drum-pad:hover {
+  background-color: rgb(196, 190, 190);
+  transition: 0.5s;
+}
+
+#display {
+  margin-top: 3rem;
+  border: 1px solid rgb(97, 128, 77);
+  padding: 10px;
+}
+.underline {
+  position: relative;
+}
+
+.underline::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #007bff;
+}
